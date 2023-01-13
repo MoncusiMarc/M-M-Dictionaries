@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import searchImage from '../../resources/images/search-icon.png'
+import searchImage2 from '../../resources/images/search-icon2.png'
 
 export const Box = styled.input`
     font-family: 'Comfortaa';
@@ -33,4 +34,9 @@ export const ButtonSearch = styled.button`
     left: 45.1rem;
     top: 1rem;
     width: 3rem;
+
+    :hover{
+        background: url(${searchImage2}) no-repeat right;
+        background-size: 52%;
+    }
 `
