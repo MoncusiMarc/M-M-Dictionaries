@@ -1,8 +1,8 @@
 import './styles.js'
-
+import SearchBox from '../SearchBox'
 function App () {
   return (
-    <div />
+    <SearchBox />
   )
 }
 
