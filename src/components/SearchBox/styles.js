@@ -1,6 +1,5 @@
 import styled from '@emotion/styled'
-import searchImage from './images/search-icon.png'
-import searchImage2 from './images/search-icon2.png'
+import searchImage from '../../resources/images/search-icon.png'
 
 export const Box = styled.input`
     font-family: 'Comfortaa';
@@ -26,16 +25,12 @@ export const Box = styled.input`
   
 `
 export const ButtonSearch = styled.button`
-    border:none;
+    border: none;
     background: url(${searchImage}) no-repeat right;
     background-size: 50%;
-    height:3rem;
-    position:relative;
-    left:45.1rem;
-    top:1rem;
-    width:3rem;
-   
-    Box:focus {
-        background: url(${searchImage2}) no-repeat right;
-    }
+    height: 3rem;
+    position: relative;
+    left: 45.1rem;
+    top: 1rem;
+    width: 3rem;
 `

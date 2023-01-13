@@ -8,19 +8,19 @@ const SearchBox = () => {
 
   const GetData = () => {
     axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/' + searchBoxInputWord).then(response => {
-      const array = [].concat(response.data[0].meanings[0].definitions)
-      const array2 = []
-      for (let i = 0; i < array.length; i++) {
-        array2[i] = response.data[0].meanings[0].definitions[i].definition
+      const arrayDefintions = [].concat(response.data[0].meanings[0].definitions)
+      const arrayForFDefinition = []
+      for (let i = 0; i < arrayForFDefinition.length; i++) {
+        arrayForFDefinition[i] = response.data[0].meanings[0].definitions[i].definition
       }
 
-      if (array.length === 1) {
+      if (arrayDefintions.length === 1) {
         setSearchBoxInputDefinition(response.data[0].meanings[0].definitions[0].definition)
       } else {
-        setSearchBoxInputDefinition(array2)
+        setSearchBoxInputDefinition(arrayForFDefinition)
       }
-      console.log(array2)
-      console.log(array2.length)
+      console.log(arrayForFDefinition)
+      console.log(arrayForFDefinition.length)
     })
   }
 
@@ -29,6 +29,14 @@ const SearchBox = () => {
     setSearchBoxInputWord(event.target.value)
   }
 
+  const Result = () => {
+    return (
+      <>
+        <p>{searchBoxInputWord}</p>
+        <p>{searchBoxInputDefinition}</p>
+      </>
+    )
+  }
   return (
     <>
       {searchBoxInputDefinition.length === 0
@@ -41,10 +49,7 @@ const SearchBox = () => {
           <ButtonSearch onClick={GetData} />
         </>
           )
-        : (<>
-          <p>{searchBoxInputWord}</p>
-          <p>{searchBoxInputDefinition}</p>
-        </>)}
+        : (<Result />)}
     </>
   )
 }
