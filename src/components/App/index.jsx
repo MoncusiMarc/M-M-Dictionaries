@@ -1,8 +1,11 @@
-import './styles.js'
+import { SearchBox, Window } from './styles.js'
 
 function App () {
   return (
-    <div />
+    <Window className='window'>
+      <SearchBox className='searchBox'>|
+      </SearchBox>
+    </Window>
   )
 }
 
