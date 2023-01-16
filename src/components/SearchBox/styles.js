@@ -39,4 +39,7 @@ export const ButtonSearch = styled.button`
         background: url(${searchImage2}) no-repeat right;
         background-size: 52%;
     }
+    &:focus{
+        background-size: 53%;
+    }
 `
