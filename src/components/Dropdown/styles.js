@@ -13,6 +13,13 @@ export const Button = styled.button`
     margin: 2rem;
     height: 7rem;
     width: 7rem;
+
+    &:focus{
+        background-size: 105%;
+    }
+    &:hover{
+        opacity:80%;
+    }
 `
 
 export const MainGrid = styled.div`  
@@ -29,6 +36,6 @@ export const GridRow = styled.div`
 
     &:hover{
         border-bottom: 0.3rem solid #2393FA;
-
     }
+   
 `
