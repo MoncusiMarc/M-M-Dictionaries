@@ -36,6 +36,7 @@ export const GridRow = styled.div`
 
     &:hover{
         border-bottom: 0.3rem solid #2393FA;
+        opacity:90%;
     }
    
 `
