@@ -1,8 +1,9 @@
 import './styles.js'
+import Dropdown from '../Dropdown'
 
 function App () {
   return (
-    <div />
+    <Dropdown />
   )
 }
 
