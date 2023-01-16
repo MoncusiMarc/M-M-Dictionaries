@@ -110,9 +110,17 @@
 ]
 
 export const dictionaryReducer = (state = [], action) => {
-
+  switch (action.type) {
+    case 'insert_word':{
+      return[action.payload]
+    }
+  }
 }
 
-export const insertWord = () => ({
-  type: 'insert_word'
+export const insertWord = (wordArray) => ({
+  type: 'insert_word',
+  payload:{
+    word: wordArray.word,
+    definitionsList: wordArray.meanings
+  }
 })
