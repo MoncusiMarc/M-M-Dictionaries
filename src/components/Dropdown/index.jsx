@@ -6,7 +6,6 @@ const Dropdown = () => {
 
   const openDropdown = () => {
     setDropdown(true)
-    console.log(dropdown)
   }
 
   const closeDropdown = () => {
@@ -16,7 +15,7 @@ const Dropdown = () => {
   const DropdownOpened = () => {
     return (
       <>
-        <MainDropdown width='30rem'>
+        <MainDropdown width='25%' widthMobile='90%'>
           <Button onClick={closeDropdown} />
           <MainGrid>
             <GridRow>Definition</GridRow>
@@ -32,7 +31,7 @@ const Dropdown = () => {
   const DropdownClosed = () => {
     return (
       <>
-        <MainDropdown width='10rem'>
+        <MainDropdown width='0%' minWidth='0%'>
           <Button onClick={openDropdown} />
         </MainDropdown>
       </>
