@@ -3,7 +3,7 @@ import {} from './styles.js'
 import { legacy_createStore as createStore } from 'redux'
 import { dictionaryReducer, insertWord } from '../Reducers/dictionaryReducer.js'
 import { Provider } from 'react-redux'
-import { Grid } from '../Grid/Grid'
+import { Grid } from '../Grid/index'
 
 const store = createStore(dictionaryReducer)
 
