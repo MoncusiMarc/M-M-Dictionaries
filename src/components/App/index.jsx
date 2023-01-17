@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { SearchBox, Window } from './styles.js'
+import {} from './styles.js'
 import { legacy_createStore as createStore } from 'redux'
 import { dictionaryReducer, insertWord } from '../Reducers/dictionaryReducer.js'
 import { Provider } from 'react-redux'
-import TestComponent from '../TestComponent/TestComponent.js'
+import { Grid } from '../Grid/Grid'
 
 const store = createStore(dictionaryReducer)
 
@@ -15,11 +15,7 @@ axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/hello').then(response
 function App () {
   return (
     <Provider store={store}>
-      <Window className='window'>
-        <SearchBox className='searchBox'>__
-        </SearchBox>
-        <TestComponent />
-      </Window>
+      <Grid />
     </Provider>
   )
 }

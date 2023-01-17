@@ -14,6 +14,6 @@ export const insertWord = (wordJson) => ({
   type: 'insert_word',
   payload: {
     word: wordJson.word,
-    definitionsArray: wordJson.meanings
+    meaningsArray: wordJson.meanings
   }
 })
