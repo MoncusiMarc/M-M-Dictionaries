@@ -16,7 +16,7 @@ function App () {
   return (
     <Provider store={store}>
       <Grid />
-    </Provider>
+    </Provider>   
   )
 }
 

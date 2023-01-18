@@ -1,10 +1,19 @@
+
 :root{
   --clr-black: #2A2C31;
   --clr-grey: #384257;
   --clr-white: #F4F9FF;
   --clr-blue: #2393FA;
   --ff-primary: 'Comfortaa', cursive;
+
 }
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  -webkit-appearance:none;
+
 *{
   margin: 0;
   border: none;
@@ -15,6 +24,7 @@
   font-family: var(--ff-primary);
   color: var(--clr-white);
 }
+
 body, html, .root{
   height:100%;
 }
