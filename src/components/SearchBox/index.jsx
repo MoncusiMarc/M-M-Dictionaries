@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Box, ButtonSearch } from './styles'
+import { Box, ButtonSearch, FatherBox } from './styles'
 import axios from 'axios'
 
 const SearchBox = () => {
@@ -31,23 +31,23 @@ const SearchBox = () => {
 
   const Result = () => {
     return (
-      <>
+      <FatherBox>
         <p>{searchBoxInputWord}</p>
         <p>{searchBoxInputDefinition}</p>
-      </>
+      </FatherBox>
     )
   }
   return (
     <>
       {searchBoxInputDefinition.length === 0
-        ? (<>
+        ? (<FatherBox>
           <Box
             type='search'
             onChange={handleChange}
             value={searchBoxInputWord}
           />
           <ButtonSearch onClick={GetData} />
-        </>
+           </FatherBox>
           )
         : (<Result />)}
     </>
