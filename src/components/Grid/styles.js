@@ -22,7 +22,3 @@ export const SearchingView = styled(Grid)`
 export const Information = styled.div`
     grid-area: Information;
 `
-
-export const Footer = styled.div`
-    grid-area: Footer;
-`
