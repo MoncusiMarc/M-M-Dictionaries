@@ -14,17 +14,15 @@ const Dropdown = () => {
 
   const DropdownOpened = () => {
     return (
-      <>
-        <MainDropdown width='25%' widthMobile='90%'>
-          <Button onClick={closeDropdown} />
-          <MainGrid>
-            <GridRow>Definition</GridRow>
-            <GridRow>Synonyms</GridRow>
-            <GridRow>Antonyms</GridRow>
-            <GridRow>Images</GridRow>
-          </MainGrid>
-        </MainDropdown>
-      </>
+      <MainDropdown width='25%' widthMobile='90%'>
+        <Button onClick={closeDropdown} />
+        <MainGrid>
+          <GridRow>Definition</GridRow>
+          <GridRow>Synonyms</GridRow>
+          <GridRow>Antonyms</GridRow>
+          <GridRow>Images</GridRow>
+        </MainGrid>
+      </MainDropdown>
     )
   }
 
