@@ -26,7 +26,6 @@ export const Box = styled.input`
     @media (max-width: 420px){
        left:10rem;
        top:20rem;
-       background-color:blue;
     }
 `
 export const ButtonSearch = styled.button`
