@@ -2,12 +2,13 @@ import styled from '@emotion/styled'
 import searchImage from '../../resources/images/search-icon.png'
 import searchImage2 from '../../resources/images/search-icon2.png'
 
+export const FatherBox = styled.div`
+    grid-area:searhBox;
+`
 export const Box = styled.input`
     font-family: 'Comfortaa';
     background-color: transparent;
-    border: none;
-    border-bottom: 0.1rem solid #F4F9FF;
-    color: #F4F9FF;
+    border-bottom: 0.1rem solid ${props => props.theme.colors.white};
     font-size: 1.5rem;
     height: 3rem;
     left: 48rem;
@@ -19,7 +20,7 @@ export const Box = styled.input`
     &:focus {
 
         outline: none;
-        border-bottom: 0.1rem solid #2393FA;
+        border-bottom: 0.1rem solid  ${props => props.theme.colors.blue};
           
     }
  
