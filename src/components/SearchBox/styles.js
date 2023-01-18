@@ -10,11 +10,10 @@ export const Box = styled.input`
     color: #F4F9FF;
     font-size: 1.5rem;
     height: 3rem;
-    left: 40%;
+    left: 48rem;
     margin:  25rem 0 0 -5rem;
     padding: 10px 0px;
     position: relative;
-    top: 50%;
     width: 40rem;
 
     &:focus {
@@ -23,7 +22,12 @@ export const Box = styled.input`
         border-bottom: 0.1rem solid #2393FA;
           
     }
-  
+ 
+    @media (max-width: 420px){
+       left:10rem;
+       top:20rem;
+       background-color:blue;
+    }
 `
 export const ButtonSearch = styled.button`
     border: none;
@@ -42,4 +46,9 @@ export const ButtonSearch = styled.button`
     &:focus{
         background-size: 53%;
     }
+
+    @media (max-width: 420px){
+        top:13rem;
+        left:20rem;
+     }
 `
