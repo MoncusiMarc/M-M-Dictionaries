@@ -21,7 +21,7 @@ const Dropdown = () => {
             <GridRow>Definition</GridRow>
             <GridRow>Synonyms</GridRow>
             <GridRow>Antonyms</GridRow>
-            <GridRow>Antoher one...</GridRow>
+            <GridRow>Images</GridRow>
           </MainGrid>
         </MainDropdown>
       </>
