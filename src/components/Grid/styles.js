@@ -7,7 +7,7 @@ export const Grid = styled.div`
 `
 export const FullView = styled(Grid)`
     grid-template-columns: 1fr 3fr;
-    grid-template-rows:auto;
+    grid-template-rows:10% 80% 10%;
     grid-template-areas:
     "Dropdown SearchBox"
     "Dropdown Information"
@@ -15,6 +15,7 @@ export const FullView = styled(Grid)`
 `
 export const SearchingView = styled(Grid)`
     grid-template-columns: 1fr;
+    grid-template-rows: 90% 10%;
     grid-template-areas:
     "SearchBox"
     "Footer";
