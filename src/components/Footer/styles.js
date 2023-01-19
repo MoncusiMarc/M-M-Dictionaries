@@ -9,13 +9,13 @@ export const Title = styled.h1`
     background:${props => props.theme.colors.grey};
 `
 export const Box = styled.div`
-    padding: 80px 60px;
+    padding: 5rem 3.75rem;
     background-color:${props => props.theme.colors.grey};
     bottom: 0;
-    width: 100%;
+    width: 100vw;
 
     @media (max-width: 1000px) {
-        padding: 70px 30px;
+        padding: 4.375rem 1.875rem;
     }
 `
 
@@ -23,7 +23,7 @@ export const Container = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: center;
-    max-width: 1000px;
+    max-width: 62.5rem;
     margin: 0 auto;
     background:${props => props.theme.colors.grey};
 
@@ -33,18 +33,18 @@ export const Column = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 60px;
+    margin-left: 3.75rem;
     background:${props => props.theme.colors.grey};
 `
 export const Row = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fill, 
-                            minmax(185px, 1fr));
-    grid-gap: 20px;
+                            minmax(11.56rem, 1fr));
+    grid-gap: 1.25rem;
     
     @media (max-width: 1000px) {
         grid-template-columns: repeat(auto-fill, 
-                            minmax(200px, 1fr));
+                            minmax(12.5rem, 1fr));
     }
     background:${props => props.theme.colors.grey};
 
@@ -52,8 +52,8 @@ export const Row = styled.div`
 
 export const FooterLink = styled.a`
     color: ${props => props.theme.colors.white};
-    margin-bottom: 20px;
-    font-size: 18px;
+    margin-bottom: 1.25rem;
+    font-size: 1.125rem;
     text-decoration: none;
     
     span{
@@ -69,14 +69,14 @@ export const FooterLink = styled.a`
 `
 
 export const Heading = styled.p`
-  font-size: 24px;
+  font-size: 1.5rem;
   color: ${props => props.theme.colors.white};
-  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
   font-weight: bold;
   background:${props => props.theme.colors.grey};
 
 `
 export const Copyright = styled.p`
     background:${props => props.theme.colors.grey};
-    margin-left:45%;
+    margin-left:41vw;
 `
