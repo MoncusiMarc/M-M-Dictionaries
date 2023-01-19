@@ -21,6 +21,7 @@ export const Grid = () => {
     return (
       <SearchingView className='SearchingView'>
         <SearchBox className='searchBox'> _ </SearchBox>
+        <Footer className='Footer' />
       </SearchingView>
     )
   }
