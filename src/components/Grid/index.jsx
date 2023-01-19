@@ -1,8 +1,9 @@
 import React from 'react'
 import Dropdown from '../Dropdown/index'
 import SearchBox from '../SearchBox/index'
+import Footer from '../Footer/index'
 import { useSelector } from 'react-redux'
-import { FullView, SearchingView, Information, Footer } from './styles.js'
+import { FullView, SearchingView, Information } from './styles.js'
 
 export const Grid = () => {
   const Words = useSelector((state) => state)
@@ -13,7 +14,7 @@ export const Grid = () => {
         <Dropdown className='Dropdown' />
         <SearchBox className='SearchBox' />
         <Information className='Information'> This is the Informatio</Information>
-        <Footer className='Footer'> This is the Footer</Footer>
+        <Footer className='Footer' />
       </FullView>
     )
   } else {
