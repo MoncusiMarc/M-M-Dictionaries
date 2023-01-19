@@ -2,43 +2,26 @@ import styled from '@emotion/styled'
 import searchImage from '../../resources/images/search-icon.png'
 import searchImage2 from '../../resources/images/search-icon2.png'
 
-export const FatherBox = styled.div`
-    grid-area:searhBox;
+export const FatherBox = styled.form`
+    grid-area:SearchBox;
+    justify-self: center;
+    align-self: center;
 `
 export const Box = styled.input`
     font-family: 'Comfortaa';
-    background-color: transparent;
     border-bottom: 0.1rem solid ${props => props.theme.colors.white};
     font-size: 1.5rem;
-    height: 3rem;
-    left: 48rem;
-    margin:  25rem 0 0 -5rem;
-    padding: 10px 0px;
-    position: relative;
-    width: 40rem;
-
     &:focus {
-
         outline: none;
         border-bottom: 0.1rem solid  ${props => props.theme.colors.blue};
-          
     }
- 
     @media (max-width: 420px){
-       left:10rem;
-       top:20rem;
     }
 `
 export const ButtonSearch = styled.button`
     border: none;
     background: url(${searchImage}) no-repeat right;
     background-size: 50%;
-    height: 3rem;
-    position: relative;
-    left: 45.1rem;
-    top: 1rem;
-    width: 3rem;
-
     :hover{
         background: url(${searchImage2}) no-repeat right;
         background-size: 52%;

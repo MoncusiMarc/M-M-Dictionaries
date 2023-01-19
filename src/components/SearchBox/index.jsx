@@ -1,56 +1,27 @@
-import React, { useState } from 'react'
-import { Box, ButtonSearch, FatherBox } from './styles'
+import React from 'react'
 import axios from 'axios'
+import { Box, ButtonSearch, FatherBox } from './styles'
+import { insertWord } from '../Reducers/dictionaryReducer.js'
+import { useDispatch } from 'react-redux'
 
 const SearchBox = () => {
-  const [searchBoxInputDefinition, setSearchBoxInputDefinition] = useState([])
-  const [searchBoxInputWord, setSearchBoxInputWord] = useState('')
+  const dispatch = useDispatch()
 
-  const GetData = () => {
-    axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/' + searchBoxInputWord).then(response => {
-      const arrayDefintions = [].concat(response.data[0].meanings[0].definitions)
-      const arrayForFDefinition = []
-      for (let i = 0; i < arrayForFDefinition.length; i++) {
-        arrayForFDefinition[i] = response.data[0].meanings[0].definitions[i].definition
-      }
-
-      if (arrayDefintions.length === 1) {
-        setSearchBoxInputDefinition(response.data[0].meanings[0].definitions[0].definition)
-      } else {
-        setSearchBoxInputDefinition(arrayForFDefinition)
-      }
-      console.log(arrayForFDefinition)
-      console.log(arrayForFDefinition.length)
-    })
-  }
-
-  const handleChange = (event) => {
+  const submitHandler = (event) => {
     event.preventDefault()
-    setSearchBoxInputWord(event.target.value)
+    const { target } = event
+    const name = target.WordSearch.value
+    axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/' + name).then(response => {
+      dispatch(insertWord(response.data[0]))
+    })
+    target.newPassenger.value = ''
   }
 
-  const Result = () => {
-    return (
-      <FatherBox>
-        <p>{searchBoxInputWord}</p>
-        <p>{searchBoxInputDefinition}</p>
-      </FatherBox>
-    )
-  }
   return (
-    <>
-      {searchBoxInputDefinition.length === 0
-        ? (<FatherBox>
-          <Box
-            type='search'
-            onChange={handleChange}
-            value={searchBoxInputWord}
-          />
-          <ButtonSearch onClick={GetData} />
-           </FatherBox>
-          )
-        : (<Result />)}
-    </>
+    <FatherBox onSubmit={submitHandler} className='SearchBox'>
+      <Box type='search' name='WordSearch' />
+      <ButtonSearch />
+    </FatherBox>
   )
 }
 
