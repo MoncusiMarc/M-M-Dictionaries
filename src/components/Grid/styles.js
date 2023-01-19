@@ -16,7 +16,8 @@ export const FullView = styled(Grid)`
 export const SearchingView = styled(Grid)`
     grid-template-columns: 1fr;
     grid-template-areas:
-    "SearchBox";
+    "SearchBox"
+    "Footer";
 `
 
 export const Information = styled.div`
