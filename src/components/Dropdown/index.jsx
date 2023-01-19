@@ -15,7 +15,7 @@ const Dropdown = () => {
   const DropdownOpened = () => {
     return (
       <>
-        <MainDropdown width='25%' widthMobile='90%'>
+        <MainDropdown width='100%' widthMobile='190%'>
           <Button onClick={closeDropdown} />
           <MainGrid>
             <GridRow>Definition</GridRow>

@@ -3,38 +3,26 @@ import image from '../../resources/images/dropdown-button.png'
 
 export const MainDropdown = styled.div`  
     background-color: #384257;
-    height: 59rem;
+    height: 100%;
     width: ${props => props.width};
+    z-index: 1;
     @media (max-width: 420px){
         width: ${props => props.widthMobile};
     }
 `
 export const Button = styled.button`  
-    background: url(${image}) no-repeat left;
+    background: url(${image}) no-repeat;
     background-size: 100%;
-    border: none;
-    margin: 1rem;
-    height: 7rem;
-    width: 7rem;
-
-    &:focus{
-        background-size: 105%;
-    }
-
+    margin: 0.8rem;
+    height: 3rem;
+    width: 3rem;
     &:hover{
         opacity:80%;
-    }
-
-    @media (max-width: 420px){
-        width:4rem;
-        height:4rem;
-        margin:0.5rem;
     }
 
 `
 
 export const MainGrid = styled.div`  
-    font-family: 'Comfortaa';
     font-size: 2rem;
     color: #F4F9FF;
     margin-left:0.8rem; 
