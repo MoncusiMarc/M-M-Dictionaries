@@ -11,12 +11,13 @@ export const FullView = styled(Grid)`
     grid-template-areas:
     "Dropdown SearchBox"
     "Dropdown Information"
-    "Dropdown Footer";
+    "Footer Footer";
 `
 export const SearchingView = styled(Grid)`
     grid-template-columns: 1fr;
     grid-template-areas:
-    "SearchBox";
+    "SearchBox"
+    "Footer";
 `
 
 export const Information = styled.div`
