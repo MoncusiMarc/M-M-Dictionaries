@@ -21,47 +21,47 @@ const Dropdown = () => {
           <Row>
             <Column>
               <Heading>About Us</Heading>
-              <FooterLink href='#'>Aim</FooterLink>
-              <FooterLink href='#'>Vision</FooterLink>
-              <FooterLink href='#'>Company policy</FooterLink>
+              <FooterLink>Aim</FooterLink>
+              <FooterLink>Vision</FooterLink>
+              <FooterLink>Company policy</FooterLink>
             </Column>
             <Column>
               <Heading>Services</Heading>
-              <FooterLink href='#'>Education</FooterLink>
-              <FooterLink href='#'>Coding</FooterLink>
-              <FooterLink href='#'>Teaching</FooterLink>
+              <FooterLink>Education</FooterLink>
+              <FooterLink>Coding</FooterLink>
+              <FooterLink>Teaching</FooterLink>
             </Column>
             <Column>
               <Heading>Contact Us</Heading>
-              <FooterLink href='#'>Email</FooterLink>
-              <FooterLink href='#'>Phone number</FooterLink>
-              <FooterLink href='#'>Technical service</FooterLink>
+              <FooterLink>Email</FooterLink>
+              <FooterLink>Phone number</FooterLink>
+              <FooterLink>Technical service</FooterLink>
             </Column>
             <Column>
               <Heading>Social Media</Heading>
-              <FooterLink href='#'>
-                <i className='fab fa-facebook-f'>
+              <FooterLink>
+                <i>
                   <span>
                     Facebook
                   </span>
                 </i>
               </FooterLink>
-              <FooterLink href='#'>
-                <i className='fab fa-instagram'>
+              <FooterLink>
+                <i>
                   <span>
                     Instagram
                   </span>
                 </i>
               </FooterLink>
-              <FooterLink href='#'>
-                <i className='fab fa-twitter'>
+              <FooterLink>
+                <i>
                   <span>
                     Twitter
                   </span>
                 </i>
               </FooterLink>
-              <FooterLink href='#'>
-                <i className='fab fa-youtube'>
+              <FooterLink>
+                <i>
                   <span>
                     Youtube
                   </span>
