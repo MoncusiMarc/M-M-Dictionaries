@@ -14,7 +14,7 @@ const SearchBox = () => {
     axios.get('https://api.dictionaryapi.dev/api/v2/entries/en/' + name).then(response => {
       dispatch(insertWord(response.data[0]))
     })
-    target.newPassenger.value = ''
+    target.WordSearch.value = ''
   }
 
   return (

@@ -15,23 +15,18 @@ export const Box = styled.input`
         outline: none;
         border-bottom: 0.1rem solid  ${props => props.theme.colors.blue};
     }
-    @media (max-width: 420px){
-    }
 `
 export const ButtonSearch = styled.button`
     border: none;
-    background: url(${searchImage}) no-repeat right;
-    background-size: 50%;
+    background: url(${searchImage}) no-repeat;
+    background-size: 100%;
+    width: 2rem;
+    height: 2rem;
     :hover{
-        background: url(${searchImage2}) no-repeat right;
-        background-size: 52%;
+        background: url(${searchImage2}) no-repeat;
+        background-size: 100%;
     }
     &:focus{
-        background-size: 53%;
+        background-size: 100%;
     }
-
-    @media (max-width: 420px){
-        top:13rem;
-        left:20rem;
-     }
 `
