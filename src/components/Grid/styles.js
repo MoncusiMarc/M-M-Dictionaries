@@ -20,7 +20,3 @@ export const SearchingView = styled(Grid)`
     "SearchBox"
     "Footer";
 `
-
-export const Information = styled.div`
-    grid-area: Information;
-`
