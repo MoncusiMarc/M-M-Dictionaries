@@ -9,9 +9,13 @@ import { FullView, SearchingView } from './styles.js'
 
 export const Grid = () => {
   const [dropdown, setDropdown] = useState(false)
+  const [information, setInformation] = useState('definitions')
 
   const invertDropdown = () => {
     setDropdown(!dropdown)
+  }
+  const changeInformation = (selection) => {
+    setInformation(selection)
   }
 
   const Words = useSelector((state) => state)
@@ -19,9 +23,9 @@ export const Grid = () => {
     return (
       <FullView className='FullView' isDropdown={dropdown}>
         <DropdownButton className='DropdownButton' invertDropdown={invertDropdown} isDropdown={dropdown} />
-        {dropdown ? <Dropdown className='Dropdown' /> : ''}
+        {dropdown ? <Dropdown className='Dropdown' changeInformation={changeInformation} /> : ''}
         <SearchBox className='SearchBox' />
-        <Information className='Information' />
+        <Information className='Information' details={information} />
         <Footer className='Footer' />
       </FullView>
     )

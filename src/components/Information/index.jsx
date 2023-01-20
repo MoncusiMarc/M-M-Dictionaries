@@ -1,11 +1,10 @@
 import React from 'react'
 import { InformationContent, Title, Content } from './styles'
 import { useSelector } from 'react-redux'
-// import { Selection } from '../Dropdown'
 
-const Information = () => {
+const Information = (information) => {
   const Words = useSelector((state) => state)
-  const selection = 'antonyms'
+  const selection = 'definitions'
 
   const Definitions = () => {
     return (
