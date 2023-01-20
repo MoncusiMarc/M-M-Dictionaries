@@ -4,18 +4,16 @@ export const MainFooter = styled.div`
     grid-area:Footer;
 `
 export const Title = styled.h1`
-    margin-left:45%;
+    text-align: center;
     margin-bottom:2%;
     background:${props => props.theme.colors.grey};
 `
 export const Box = styled.div`
-    padding: 5rem 3.75rem;
+    padding: 2rem 3rem;
     background-color:${props => props.theme.colors.grey};
-    bottom: 0;
-    width: 100vw;
 
     @media (max-width: 1000px) {
-        padding: 4.375rem 1.875rem;
+        padding: 2rem 2rem;
     }
 `
 
@@ -33,7 +31,7 @@ export const Column = styled.div`
     display: flex;
     flex-direction: column;
     text-align: left;
-    margin-left: 3.75rem;
+    margin-left: 1rem;
     background:${props => props.theme.colors.grey};
 `
 export const Row = styled.div`
@@ -71,12 +69,12 @@ export const FooterLink = styled.a`
 export const Heading = styled.p`
   font-size: 1.5rem;
   color: ${props => props.theme.colors.white};
-  margin-bottom: 2.5rem;
+  margin-bottom: 1rem;
   font-weight: bold;
   background:${props => props.theme.colors.grey};
 
 `
 export const Copyright = styled.p`
     background:${props => props.theme.colors.grey};
-    margin-left:41vw;
+    text-align:center;
 `
