@@ -9,7 +9,7 @@ export const FullView = styled(Grid)`
     grid-template-columns: 1fr 3fr;
     grid-template-rows:10% 80% 10%;
     grid-template-areas:
-    "Dropdown SearchBox"
+    "DropdownButton SearchBox"
     "Dropdown Information"
     "Footer Footer";
 `
