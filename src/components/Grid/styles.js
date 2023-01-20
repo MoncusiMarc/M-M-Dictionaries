@@ -10,7 +10,8 @@ export const FullView = styled(Grid)`
     grid-template-rows:10% 80% 10%;
     grid-template-areas:
     "DropdownButton SearchBox"
-    "Dropdown Information"
+    ${props => props.isDropdown === true ? '"Dropdown Information"' : '"Information Information"'}
+    
     "Footer Footer";
 `
 export const SearchingView = styled(Grid)`
