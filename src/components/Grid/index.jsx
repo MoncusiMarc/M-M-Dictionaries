@@ -15,11 +15,10 @@ export const Grid = () => {
   }
 
   const Words = useSelector((state) => state)
-
   if (Words.length > 0) {
     return (
-      <FullView className='FullView'>
-        <DropdownButton className='DropdownButton' invertDropdown={invertDropdown} />
+      <FullView className='FullView' isDropdown={dropdown}>
+        <DropdownButton className='DropdownButton' invertDropdown={invertDropdown} isDropdown={dropdown} />
         {dropdown ? <Dropdown className='Dropdown' /> : ''}
         <SearchBox className='SearchBox' />
         <Information className='Information' />

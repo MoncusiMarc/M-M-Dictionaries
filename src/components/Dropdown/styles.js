@@ -11,6 +11,7 @@ export const ListItem = styled.div`
     margin: 0 0.8rem; 
     height: 2.5rem;
     background-color: ${props => props.theme.colors.grey};
+
     &:hover{
         border-bottom: 0.3rem solid ${props => props.theme.colors.blue};
         opacity:90%;
