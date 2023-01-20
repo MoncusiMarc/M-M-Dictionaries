@@ -3,8 +3,9 @@ import Dropdown from '../Dropdown/index'
 import DropdownButton from '../DropdownButton'
 import SearchBox from '../SearchBox/index'
 import Footer from '../Footer/index'
+import Information from '../Information/index'
 import { useSelector } from 'react-redux'
-import { FullView, SearchingView, Information } from './styles.js'
+import { FullView, SearchingView } from './styles.js'
 
 export const Grid = () => {
   const [dropdown, setDropdown] = useState(false)
@@ -20,7 +21,7 @@ export const Grid = () => {
         <DropdownButton className='DropdownButton' invertDropdown={invertDropdown} isDropdown={dropdown} />
         {dropdown ? <Dropdown className='Dropdown' /> : ''}
         <SearchBox className='SearchBox' />
-        <Information className='Information'>This is the Information</Information>
+        <Information className='Information' />
         <Footer className='Footer' />
       </FullView>
     )
