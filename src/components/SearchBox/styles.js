@@ -23,10 +23,10 @@ export const Box = styled.input`
 `
 export const ButtonSearch = styled.button`
     border: none;
-    background: url(${searchImage}) no-repeat;
-    background-size: 100%;
     width: 2rem;
     height: 2rem;
+    background: url(${searchImage}) no-repeat;
+    background-size: 100%;
 
     :hover{
         background: url(${searchImage2}) no-repeat;

@@ -4,9 +4,9 @@ export const MainFooter = styled.div`
     grid-area:Footer;
 `
 export const Title = styled.h1`
-    text-align: center;
     margin-bottom:2%;
     background:${props => props.theme.colors.grey};
+    text-align: center;
 `
 export const Box = styled.div`
     padding: 2rem 3rem;
@@ -18,34 +18,30 @@ export const Box = styled.div`
 `
 
 export const Container = styled.div`
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    max-width: 62.5rem;
+    display: flex;
     margin: 0 auto;
+    max-width: 62.5rem;
     background:${props => props.theme.colors.grey};
-
+    justify-content: center;
 `
 
 export const Column = styled.div`
-    display: flex;
     flex-direction: column;
-    text-align: left;
+    display: flex;
     margin-left: 1rem;
     background:${props => props.theme.colors.grey};
+    text-align: left;
 `
 export const Row = styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fill, 
-                            minmax(11.56rem, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(11.56rem, 1fr));
     grid-gap: 1.25rem;
+    display: grid;
+    background:${props => props.theme.colors.grey};
     
     @media (max-width: 1000px) {
-        grid-template-columns: repeat(auto-fill, 
-                            minmax(12.5rem, 1fr));
+        grid-template-columns: repeat(auto-fill, minmax(12.5rem, 1fr));
     }
-    background:${props => props.theme.colors.grey};
-
 `
 
 export const FooterLink = styled.a`
@@ -67,12 +63,11 @@ export const FooterLink = styled.a`
 `
 
 export const Heading = styled.p`
-  font-size: 1.5rem;
-  color: ${props => props.theme.colors.white};
-  margin-bottom: 1rem;
-  font-weight: bold;
-  background:${props => props.theme.colors.grey};
-
+    margin-bottom: 1rem;
+    background:${props => props.theme.colors.grey};
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: ${props => props.theme.colors.white};
 `
 export const Copyright = styled.p`
     background:${props => props.theme.colors.grey};
