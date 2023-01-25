@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 const Information = () => {
   const Words = useSelector((state) => state)
-  const selection = 'antonyms'
+  const selection = 'gif'
 
   const Definitions = () => {
     return (
@@ -79,11 +79,11 @@ const Information = () => {
     )
   }
 
-  const Images = () => {
+  const Gif = () => {
     return (
       <InformationContent>
-        {Words.map((word) => (
-          <div key={word.word} />
+        {Words.map((word, index) => (
+          <img key={index} src={word.url} />
         ))}
       </InformationContent>
     )
@@ -94,6 +94,8 @@ const Information = () => {
     return (<Synonyms />)
   } else if (selection === 'antonyms') {
     return (<Antonyms />)
+  } else if (selection === 'gif') {
+    return (<Gif />)
   }
 }
 
