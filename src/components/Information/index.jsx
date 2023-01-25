@@ -1,5 +1,5 @@
 import React from 'react'
-import { InformationContent, Title, Content } from './styles'
+import { InformationContent, Title, Content, Image } from './styles'
 import { useSelector } from 'react-redux'
 // import { Selection } from '../Dropdown'
 
@@ -83,7 +83,7 @@ const Information = () => {
     return (
       <InformationContent>
         {Words.map((word, index) => (
-          <img key={index} src={word.url} />
+          <Image key={index} src={word.url} />
         ))}
       </InformationContent>
     )
