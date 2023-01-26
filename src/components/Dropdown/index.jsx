@@ -1,13 +1,13 @@
 import React from 'react'
 import { DropdownList, ListItem } from './styles'
 
-const Dropdown = () => {
+const Dropdown = ({ changeInformation }) => {
   return (
     <DropdownList>
-      <ListItem>Definition</ListItem>
-      <ListItem>Definition</ListItem>
-      <ListItem>Definition</ListItem>
-      <ListItem>Definition</ListItem>
+      <ListItem onClick={changeInformation('definitions')}>Definition</ListItem>
+      <ListItem onClick={changeInformation('synonyms')}>Synonyms</ListItem>
+      <ListItem onClick={changeInformation('antonyms')}>Antonyms</ListItem>
+      <ListItem onClick={changeInformation('images')}>Images</ListItem>
     </DropdownList>
   )
 }

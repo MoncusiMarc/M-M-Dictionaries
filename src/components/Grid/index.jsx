@@ -3,14 +3,19 @@ import Dropdown from '../Dropdown/index'
 import DropdownButton from '../DropdownButton'
 import SearchBox from '../SearchBox/index'
 import Footer from '../Footer/index'
+import Information from '../Information/index'
 import { useSelector } from 'react-redux'
-import { FullView, SearchingView, Information } from './styles.js'
+import { FullView, SearchingView } from './styles.js'
 
 export const Grid = () => {
   const [dropdown, setDropdown] = useState(false)
+  const [information, setInformation] = useState('definitions')
 
   const invertDropdown = () => {
     setDropdown(!dropdown)
+  }
+  const changeInformation = (selection) => {
+    setInformation(selection)
   }
 
   const Words = useSelector((state) => state)
@@ -18,9 +23,9 @@ export const Grid = () => {
     return (
       <FullView className='FullView' isDropdown={dropdown}>
         <DropdownButton className='DropdownButton' invertDropdown={invertDropdown} isDropdown={dropdown} />
-        {dropdown ? <Dropdown className='Dropdown' /> : ''}
         <SearchBox className='SearchBox' />
-        <Information className='Information'>This is the Information</Information>
+        {dropdown ? <Dropdown className='Dropdown' changeInformation={changeInformation} /> : ''}
+        <Information className='Information' details={information} />
         <Footer className='Footer' />
       </FullView>
     )

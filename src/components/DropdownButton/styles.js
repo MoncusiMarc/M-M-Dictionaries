@@ -2,21 +2,20 @@ import styled from '@emotion/styled'
 import image from '../../resources/images/dropdown-button.png'
 
 export const DropdownTop = styled.div`
-    height: 100%;
     width: 100%;
+    height: 100%;
     background-color: ${props => props.isDropdown === true ? props.theme.colors.grey : 'inherit'};
 `
 
 export const Button = styled.button`
-    grid-area: DropdownButton;
+    margin: 0.8rem;
+    width: 3rem;
+    height: 3rem;
     background: url(${image}) no-repeat;
     background-size: 100%;
-    
-    margin: 0.8rem;
-    height: 3rem;
-    width: 3rem;
+
+    grid-area: DropdownButton;
     &:hover{
         opacity:80%;
     }
-    
 `
