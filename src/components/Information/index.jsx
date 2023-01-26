@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux'
 
 const Information = () => {
   const Words = useSelector((state) => state)
-  const selection = 'gif'
+  const selection = 'gif' // option selected in dropdown
 
   const Definitions = () => {
     return (
