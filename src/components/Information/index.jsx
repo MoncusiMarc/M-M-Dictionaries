@@ -1,5 +1,5 @@
 import React from 'react'
-import { InformationContent, Title, Content } from './styles'
+import { InformationContent, Title, Content, Image } from './styles'
 import { useSelector } from 'react-redux'
 
 const Information = (information) => {
@@ -78,11 +78,11 @@ const Information = (information) => {
     )
   }
 
-  const Images = () => {
+  const Gif = () => {
     return (
       <InformationContent>
-        {Words.map((word) => (
-          <div key={word.word} />
+        {Words.map((word, index) => (
+          <Image key={index} src={word.url} />
         ))}
       </InformationContent>
     )
@@ -93,6 +93,8 @@ const Information = (information) => {
     return (<Synonyms />)
   } else if (selection === 'antonyms') {
     return (<Antonyms />)
+  } else if (selection === 'gif') {
+    return (<Gif />)
   }
 }
 
