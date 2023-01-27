@@ -9,7 +9,7 @@ import {
   Title,
   Copyright
 } from './styles'
-// TODO: make it small
+
 const Dropdown = () => {
   return (
     <MainFooter>
