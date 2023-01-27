@@ -14,6 +14,7 @@ export const dictionaryReducer = (state = [], action) => {
     }
   }
 }
+// TODO: millorar el reducer
 
 export const insertWord = (wordJson) => ({
   type: 'insert_word',

@@ -1,6 +1,7 @@
 import React from 'react'
 import { DropdownList, ListItem } from './styles'
 
+// TODO: averiguar si podem millorar el llistat amb el reducer
 const Dropdown = ({ changeInformation }) => {
   return (
     <DropdownList>

@@ -6,7 +6,7 @@ const Information = ({ details }) => {
   const Words = useSelector((state) => state)
   const selection = details
   console.log(selection)
-
+  //TODO: arreglar el codi, afegir el part of speech
   const Definitions = () => {
     return (
       <InformationContent>
