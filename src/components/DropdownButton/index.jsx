@@ -1,10 +1,10 @@
 import React from 'react'
 import { Button, DropdownTop } from './styles'
 
-const DropdownButton = ({ invertDropdown }, dropdown) => {
-  console.log(dropdown)
+const DropdownButton = ({ invertDropdown, isDropdown }) => {
+  console.log(isDropdown)
   return (
-    <DropdownTop className='DropdownButton' isDropdown={dropdown}>
+    <DropdownTop className='DropdownButton' isDropdown={isDropdown}>
       <Button onClick={invertDropdown} />
     </DropdownTop>
   )
