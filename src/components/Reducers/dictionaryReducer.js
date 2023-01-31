@@ -1,6 +1,6 @@
 export const dictionaryReducer = (state = [], action) => {
   switch (action.type) {
-    case 'insert_word':{
+    case 'insert_word': {
       return [...state, action.payload]
     }
     case 'insert_gif':{
