@@ -1,12 +1,12 @@
 import React from 'react'
-import { InformationContent, Title, Content, Image } from './styles'
+import { InformationContent, Title, Content, Image, PartOfSpeechDiv, PartOfSpeech } from './styles'
 import { useSelector } from 'react-redux'
 
 const Information = ({ details }) => {
   const Words = useSelector((state) => state)
   const selection = details
   console.log(selection)
-  //TODO: arreglar el codi, afegir el part of speech
+
   const Definitions = () => {
     return (
       <InformationContent>
@@ -17,11 +17,18 @@ const Information = ({ details }) => {
             </Title>
             <Content>
               {Array.isArray(word.meaningsArray)
-                ? word.meaningsArray.map((meanings) => (
-                  meanings.definitions.map((definition, index) => (
-                    <p className='definition' key={definition.definition}>{index}.-{definition.definition}</p>
-                  ))
-                ))
+                ? word.meaningsArray.map((meanings, index) => (
+                  meanings.definitions.length !== 0
+                    ? (
+                      <PartOfSpeechDiv key={index}>
+                        <PartOfSpeech>{meanings.partOfSpeech}</PartOfSpeech>
+                        {meanings.definitions.map((definition) => (
+                          <p className='definition' key={definition.definition}>- {definition.definition}</p>
+                        ))}
+                      </PartOfSpeechDiv>)
+                    : ('')
+                )
+                )
                 : ''}
               <br />
             </Content>
@@ -41,12 +48,16 @@ const Information = ({ details }) => {
             <Content>
               {Array.isArray(word.meaningsArray)
                 ? word.meaningsArray.map((meanings, index2) => (
-                  <div key={index2}>
-                    <p>{index2}</p>
-                    {meanings.synonyms.map((synonym, index) => (
-                      <p key={index}> {synonym}</p>
-                    ))}
-                  </div>
+                  meanings.synonyms.length !== 0
+                    ? (
+                      <PartOfSpeechDiv key={index2}>
+                        <PartOfSpeech>{meanings.partOfSpeech}</PartOfSpeech>
+                        {meanings.synonyms.map((synonym, index) => (
+                          <p key={index}> {synonym}</p>
+                        ))}
+                      </PartOfSpeechDiv>
+                      )
+                    : ('')
                 ))
                 : ''}
               <br />
@@ -69,12 +80,15 @@ const Information = ({ details }) => {
             <Content>
               {Array.isArray(word.meaningsArray)
                 ? word.meaningsArray.map((meanings, index2) => (
-                  <div key={index2}>
-                    <p>{index2}</p>
-                    {meanings.antonyms.map((antonym, index) => (
-                      <p key={index}> {antonym}</p>
-                    ))}
-                  </div>
+                  meanings.antonyms.length !== 0
+                    ? (
+                      <PartOfSpeechDiv key={index2}>
+                        <PartOfSpeech>{meanings.partOfSpeech}</PartOfSpeech>
+                        {meanings.antonyms.map((antonym, index) => (
+                          <p key={index}> {antonym}</p>
+                        ))}
+                      </PartOfSpeechDiv>)
+                    : ('')
                 ))
                 : ''}
               <br />
@@ -88,9 +102,7 @@ const Information = ({ details }) => {
   const Gif = () => {
     return (
       <InformationContent>
-        {Words.map((word, index) => (
-          <Image key={index} src={word.url} />
-        ))}
+        <Image src={Words[0].url} />
       </InformationContent>
     )
   }
