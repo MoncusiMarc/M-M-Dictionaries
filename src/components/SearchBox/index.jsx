@@ -1,5 +1,4 @@
 import React from 'react'
-import axios from 'axios'
 import { Box, ButtonSearch, FatherBox } from './styles'
 import { insertWord, insertGif } from '../Reducers/dictionaryReducer.js'
 import { useDispatch } from 'react-redux'
@@ -15,9 +14,14 @@ const SearchBox = () => {
     const gifApi = 'https://api.giphy.com/v1/gifs/search?api_key=SJmFMHYSAcOlNthoa9wrEaawk78UGKfy&q=' + name + '&limit=25&offset=0&rating=g&lang=en'
 
     dispatch({ type: 'clear' })
-    axios.get(dictionaryApi).then(response => { dispatch(insertWord(response.data[0])) })
-    axios.get(gifApi).then(response => { dispatch(insertGif(response.data.data[0].images.downsized)) })
 
+    fetch(dictionaryApi)
+      .then(response => response.json())
+      .then(data => { dispatch(insertWord(data[0])) })
+
+    fetch(gifApi)
+      .then(response => response.json())
+      .then(data => { dispatch(insertGif(data.data[0].images.downsized)) })
     target.WordSearch.value = ''
   }
 
