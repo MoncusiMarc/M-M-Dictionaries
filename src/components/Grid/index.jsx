@@ -13,7 +13,6 @@ export const Grid = () => {
 
   const invertDropdown = () => {
     setDropdown(!dropdown)
-    console.log(dropdown)
   }
   const changeInformation = (selection) => {
     setInformation(selection)

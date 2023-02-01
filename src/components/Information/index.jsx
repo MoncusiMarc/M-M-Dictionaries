@@ -5,7 +5,6 @@ import { useSelector } from 'react-redux'
 const Information = ({ details }) => {
   const Words = useSelector((state) => state)
   const selection = details
-  console.log(selection)
 
   const Definitions = () => {
     return (
